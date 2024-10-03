@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PostsComponent } from './posts/posts.component';
 import { CardPostComponent } from './card-post/card-post.component';
 import { PostsDashboardComponent } from './posts-dashboard/posts-dashboard.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 
 
@@ -10,7 +11,8 @@ import { PostsDashboardComponent } from './posts-dashboard/posts-dashboard.compo
   declarations: [
     PostsComponent,
     CardPostComponent,
-    PostsDashboardComponent
+    PostsDashboardComponent,
+    PostFormComponent
   ],
   imports: [
     CommonModule
