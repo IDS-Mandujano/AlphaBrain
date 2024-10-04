@@ -6,3 +6,5 @@ export interface IPosts {
     fecha_publicacion : string,
     descripcion : string
 }
+
+
