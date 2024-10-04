@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <app-form [newPost]="newPost" (submitPost)="handleSubmit($event)"></app-form>
+
+  <h2 class="mt-4">Lista de Videos</h2>
+  <ul class="list-group">
+    <li *ngFor="let post of posts" class="list-group-item">
+      <div class="mb-3">
+        <h3>{{ post.titulo }}</h3>
+        <iframe
+          width="100%"
+          height="315"
+          [src]="getEmbedUrl(post.video)"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p><strong>Usuario:</strong> {{ post.usuario }}</p>
+      <p><strong>Fecha de Publicación:</strong> {{ post.fecha_publicacion }}</p>
+      <p><strong>Descripción:</strong> {{ post.descripcion }}</p>
+      <button (click)="editPost(post)" class="btn btn-warning btn-sm me-2">Editar</button>
+      <button (click)="deletePost(post.id)" class="btn btn-danger btn-sm">Eliminar</button>
+    </li>
+  </ul>
+</div>
