@@ -1,7 +1,9 @@
+// src/app/app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SecurityModule } from './security/security.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    SecurityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
