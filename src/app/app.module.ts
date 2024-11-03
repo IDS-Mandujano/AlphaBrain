@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { SecurityModule } from './security/security.module';
 import { AppComponent } from './app.component';
+import { UploadFileModule } from "./upload-file/upload-file.module";
 
 @NgModule({
   declarations: [
@@ -13,8 +14,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    SecurityModule
-  ],
+    SecurityModule,
+    UploadFileModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
